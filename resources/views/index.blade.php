@@ -1,6 +1,8 @@
 @extends('layouts.master')
 
-
+@section('page-title')
+    首頁
+@endsection
 
 @section('content')
     <!-- Page Header -->

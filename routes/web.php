@@ -11,13 +11,9 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'HomeController@index');
 
-Route::get('hello', function () {
-    return view('hello');
-});
+Route::get('hello', 'HomeController@hello');
 
 Route::get('QQ', function () {
     return 'QQ';

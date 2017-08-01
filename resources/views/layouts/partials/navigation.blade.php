@@ -7,23 +7,23 @@
                 <span class="sr-only">Toggle navigation</span>
                 Menu <i class="fa fa-bars"></i>
             </button>
-            <a class="navbar-brand" href="index.blade.php">Start Bootstrap</a>
+            <a class="navbar-brand" href="{{url('/')}}">Home</a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
                 <li>
-                    <a href="index.blade.php">Home</a>
+                    <a href="{{url('/')}}">Home</a>
                 </li>
                 <li>
-                    <a href="about.blade.php">About</a>
+                    <a href="{{url('about')}}">About</a>
                 </li>
                 <li>
-                    <a href="post.blade.php">Sample Post</a>
+                    <a href="{{url('posts/1')}}">Sample Post</a>
                 </li>
                 <li>
-                    <a href="contact.blade.php">Contact</a>
+                    <a href="{{url('contact')}}">Contact</a>
                 </li>
             </ul>
         </div>

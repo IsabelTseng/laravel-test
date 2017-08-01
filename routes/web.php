@@ -14,3 +14,19 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('hello', function () {
+    return view('hello');
+});
+
+Route::get('QQ', function () {
+    return 'QQ';
+});
+
+Route::get('bye', function () {
+    return redirect('QQ');
+});
+
+Route::get('Yo/{name?}', function ($name='GG') {
+    return 'Yo,'.$name;
+});

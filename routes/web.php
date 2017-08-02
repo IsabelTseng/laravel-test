@@ -15,3 +15,12 @@ Route::get('/', 'HomeController@index');
 Route::get('about', 'AboutController@index');
 Route::get('posts/{id}', 'PostsController@show');
 Route::get('contact', 'ContactController@index');
+
+Route::get('orm', function(){
+
+    \App\Post::create([
+        'title' => '文章標題',
+        'sub_title' => '文章副標題',
+        'content' => '文章內容',
+    ]);
+});

@@ -30,7 +30,7 @@
 
 <div class="row">
     <div class="col-lg-12">
-        {{ Form::open(['route' => ['admin.posts.update',1], 'method' => 'PATCH', 'role' => 'form'])}}
+        {{ Form::model($post,['route' => ['admin.posts.update',$post->id], 'method' => 'PATCH', 'role' => 'form'])}}
 
             @include('admin.posts.partials.form')
 

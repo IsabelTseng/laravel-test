@@ -47,10 +47,12 @@
                         @else
                             <td style="text-align: center">X</td>
                         @endif
-                        <td>
+                        <td style="text-align: center" width="120">
                             <a href="{{ route('admin.posts.edit', $post->id) }}">編輯</a>
                             /
-                            <a href="#">刪除</a>
+                            {{ Form::open(['route' => ['admin.posts.destroy',$post->id], 'method' => 'DELETE', 'style' => 'display: inline-block;']) }}
+                                <button class="btn btn-link" type="submit">刪除</button>
+                            {{ Form::close() }}
                         </td>
                     </tr>
                 @endforeach

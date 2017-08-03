@@ -30,31 +30,32 @@
 
 <div class="row">
     <div class="col-lg-12">
-        <form role="form">
-
+        {{ Form::open(['route' => 'admin.posts.store', 'method' => 'POST', 'role' => 'form'])}}
             <div class="form-group">
                 <label>標題：</label>
-                <input class="form-control" placeholder="請輸入文章標題">
+                {{ Form::text('title',null,['class' => 'form-control','placeholder' => '請輸入文章標題']) }}
+            </div>
+
+            <div class="form-group">
+                <label>副標題：</label>
+                {{ Form::text('sub_title',null,['class' => 'form-control','placeholder' => '請輸入文章副標題']) }}
             </div>
 
             <div class="form-group">
                 <label>內容：</label>
-                <textarea class="form-control" rows="10"></textarea>
+                {{ Form::textarea('content', null, ['class' => 'form-control', 'rows' => '10'])}}
             </div>
 
             <div class="form-group">
                 <label>精選？</label>
-                <select class="form-control">
-                    <option value="0">否</option>
-                    <option value="1">是</option>
-                </select>
+                {{Form::select('is_feature',['0' => '否','1' => '是'],null,['class' => 'form-control'])}}
             </div>
 
             <div class="text-right">
                 <button type="submit" class="btn btn-success">新增</button>
             </div>
 
-        </form>
+        {{Form::close()}}
 
         <p>&nbsp;</p>
         <p>&nbsp;</p>

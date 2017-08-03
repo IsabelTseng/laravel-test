@@ -22,5 +22,6 @@ Route::prefix('admin')->group(function (){
     Route::get('dashboard', 'AdminDashboardController@index')->name('admin.dashboard.index');
     Route::get('posts', 'AdminPostsController@index')->name('admin.posts.index');
     Route::get('posts/create', 'AdminPostsController@create')->name('admin.posts.create');
+    Route::post('posts', 'AdminPostsController@store')->name('admin.posts.store');
     Route::get('posts/{id}/edit', 'AdminPostsController@edit')->name('admin.posts.edit');
 });

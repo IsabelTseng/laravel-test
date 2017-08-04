@@ -14,7 +14,7 @@
 #網站前台
 Route::get('/', 'HomeController@index');
 Route::get('about', 'AboutController@index');
-Route::get('posts/{id}', 'PostsController@show');
+Route::get('posts/{id}', 'PostsController@show')->name('posts.show');
 Route::get('contact', 'ContactController@index');
 
 #網站後台

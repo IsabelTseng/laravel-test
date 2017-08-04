@@ -14,16 +14,16 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
                 <li>
-                    <a href="{{url('/')}}">Home</a>
+                    <a href="{{url('/')}}">首頁</a>
                 </li>
                 <li>
-                    <a href="{{url('about')}}">About</a>
+                    <a href="{{url('about')}}">關於本站</a>
                 </li>
                 <li>
-                    <a href="{{url('posts/1')}}">Sample Post</a>
+                    <a href="{{url('posts/1')}}">文章列表</a>
                 </li>
                 <li>
-                    <a href="{{url('contact')}}">Contact</a>
+                    <a href="{{url('contact')}}">聯絡我們</a>
                 </li>
             </ul>
         </div>

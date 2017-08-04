@@ -1,0 +1,9 @@
+[
+    'providers' => [
+        App\Providers\OpenIdAuthServiceProvider::class,
+    ],
+    
+    'aliases' => [
+        'YlcAuth' => App\Ylc\Facades\YlcAuth::class,
+    ]
+]

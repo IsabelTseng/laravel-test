@@ -1,5 +1,5 @@
 @extends('layouts.master')
-
+@section('page-title','驗證信箱')
 @section('content')
 
     <header class="intro-header" style="background-image: url('{{asset('img/home-bg.jpg')}}')">

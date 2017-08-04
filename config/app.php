@@ -177,6 +177,8 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
+        App\Providers\OpenIdAuthServiceProvider::class,
+
     ],
 
     /*
@@ -228,6 +230,8 @@ return [
 
         'Form' => Collective\Html\FormFacade::class,
         'Html' => Collective\Html\HtmlFacade::class,
+
+        'YlcAuth' => App\Ylc\Facades\YlcAuth::class,
     ],
 
 ];

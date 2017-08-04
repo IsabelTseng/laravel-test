@@ -27,3 +27,7 @@ Route::prefix('admin')->group(function (){
     Route::patch('posts/{id}', 'AdminPostsController@update')->name('admin.posts.update');
     Route::delete('posts/{id}', 'AdminPostsController@destroy')->name('admin.posts.destroy');
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

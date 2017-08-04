@@ -75,6 +75,13 @@
                             </div>
                         </div>
                     </form>
+
+                    {{ Form::open(['route' => 'openid.redirect', 'method' => 'POST']) }}
+                    <button type="submit" class="btn btn-primary">
+                        以 Open ID 登入
+                    </button>
+                    {{ Form::close() }}
+
                 </div>
             </div>
         </div>

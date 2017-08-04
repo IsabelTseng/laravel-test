@@ -17,6 +17,8 @@ Route::get('about', 'AboutController@index');
 Route::get('posts/{id}', 'PostsController@show')->name('posts.show');
 Route::get('contact', 'ContactController@index');
 Auth::routes();
+Route::post('openid/redirect', 'OpenIdController@redirect')->name('openid.redirect');
+Route::get('openid/redirect', 'OpenIdController@postAuth')->name('openid.postAuth');
 
 #網站後台
 Route::prefix('admin')->middleware('auth')->group(function (){

@@ -23,7 +23,10 @@
                     <a href="{{url('posts/1')}}">文章列表</a>
                 </li>
                 <li>
-                    <a href="{{url('contact')}}">聯絡我們</a>
+                    <a href="{{url('register')}}">註冊</a>
+                </li>
+                <li>
+                    <a href="{{url('login')}}">登入</a>
                 </li>
             </ul>
         </div>

@@ -16,9 +16,10 @@ Route::get('/', 'HomeController@index');
 Route::get('about', 'AboutController@index');
 Route::get('posts/{id}', 'PostsController@show')->name('posts.show');
 Route::get('contact', 'ContactController@index');
+Auth::routes();
 
 #網站後台
-Route::prefix('admin')->group(function (){
+Route::prefix('admin')->middleware('auth')->group(function (){
     Route::get('dashboard', 'AdminDashboardController@index')->name('admin.dashboard.index');
     Route::get('posts', 'AdminPostsController@index')->name('admin.posts.index');
     Route::get('posts/create', 'AdminPostsController@create')->name('admin.posts.create');
@@ -27,7 +28,3 @@ Route::prefix('admin')->group(function (){
     Route::patch('posts/{id}', 'AdminPostsController@update')->name('admin.posts.update');
     Route::delete('posts/{id}', 'AdminPostsController@destroy')->name('admin.posts.destroy');
 });
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
